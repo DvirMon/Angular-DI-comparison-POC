@@ -1,0 +1,14 @@
+<nav>
+  <ul>
+    @for (link of navLinks; track link.path) {
+      <li>
+        <a [routerLink]="link.path">{{ link.label }}</a>
+      </li>
+    }
+  </ul>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+  <app-service-instances></app-service-instances>
+</main>
