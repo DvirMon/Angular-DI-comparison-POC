@@ -7,6 +7,7 @@ export class ModernSectionService {
   private readonly createdAt: Date;
 
   constructor(private tracker: ServiceTrackerService) {
+    console.log("ModernSectionService created");
     this.createdAt = new Date();
     this.instanceId = this.tracker.trackInstance('modern');
   }

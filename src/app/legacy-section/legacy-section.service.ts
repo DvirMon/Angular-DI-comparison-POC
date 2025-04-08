@@ -9,6 +9,8 @@ export class LegacySectionService {
   constructor(private tracker: ServiceTrackerService) {
     this.createdAt = new Date();
     this.instanceId = this.tracker.trackInstance('legacy');
+    console.log("LegacySectionService created");
+
   }
 
   getData(): string {

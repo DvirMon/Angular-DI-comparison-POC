@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LegacyDashboardComponent } from './legacy-dashboard.component';
 import { LegacyDetailsComponent } from './legacy-details.component';
 import { LegacySectionService } from './legacy-section.service';
+import { ServiceTrackerService } from '../shared/service-tracker.service';
 
 const routes: Routes = [
   {
@@ -21,6 +22,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes)
   ],
-  providers: [LegacySectionService]
+  providers: [
+    ServiceTrackerService, 
+    LegacySectionService]
 })
 export class LegacySectionModule { }

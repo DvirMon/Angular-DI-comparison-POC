@@ -7,9 +7,13 @@ export interface ServiceInstance {
   createdAt: Date;
 }
 
-@Injectable({ providedIn: 'root' })
+@Injectable()
 export class ServiceTrackerService {
   private instances = signal<ServiceInstance[]>([]);
+
+  constructor() {
+    console.log("ServiceTrackerService created")
+  }
 
   trackInstance(type: 'legacy' | 'modern'): string {
     const instance: ServiceInstance = {

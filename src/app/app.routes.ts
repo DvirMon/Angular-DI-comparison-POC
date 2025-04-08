@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { ModernSectionService } from './modern-section/modern-section.service';
+import { ServiceTrackerService } from './shared/service-tracker.service';
 
 export const routes: Routes = [
   {
@@ -16,7 +17,7 @@ export const routes: Routes = [
   },
   {
     path: 'modern-section',
-    providers: [ModernSectionService],
+    providers: [ServiceTrackerService, ModernSectionService],
     children: [
       {
         path: '',
